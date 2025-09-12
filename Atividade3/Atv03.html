@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- navegador usará a largura total dispositivo e
+      página será exibida sem zoom,
+      no seu tamanho real -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kauã Granadier Costa">
+    <meta name="description" content="Atv 3 -  Segurança e Proteção">
+    <meta name="keywords" content="Segurança, Oauth,
+    Jwl, Kauã Granadier Costa">
+
+    <link rel="stylesheet" href="./styles/atv03.css" />
+
+    <title>Atividade 3 - Segurança e Proteção</title>
+</head>
+
+<body>
+    <header class="header-1">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#home" class="nav-logo">Guia - Proteção e Segurança</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#protection" class="nav-link">
+                            Proteção e Segurança</a></li>
+                    <li class="nav-item"><a href="#oauth" class="nav-link">
+                            OAuth</a>
+                    <li class="nav-item"><a href="#jwt" class="nav-link">
+                            JWT</a></li>
+                    <li class="nav-item"><a href="#security" class="nav-link">
+                            Segurança contra XSS/CSRF</a></li>
+                    <li class="nav-item"><a href="#conclusion" class="nav-link">
+                            Conclusão</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Atividade 3 - Proteção e Segurança <br>
+                    
+                </h1>
+        </section>
+
+
+        <section class="protection section" id="protection">
+            <h2 class="section-title">Proteção e Segurança</h2>
+
+            <div class="about-container bd-grid">
+
+                <div class="box">
+                    <p class="protection-text">
+                        A proteção e a segurança, tanto das redes quanto aplicações em geral, vêm<br>
+                        ganhando grande destaque e importância com o fluxo massivo de novos usuários<br>
+                        adquiridos ao longo dos anos. Assim, diversos protocolos, ferramentas e métodos<br>
+                        de conduta surgiram para auxiliar na construção e manutenção da segurança nas <br>
+                        redes e aplicativos, a seguir alguns destes serão descritos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="oauth section" id="oauth">
+            <h2 class="section-title">OAuth</h2>
+            <div class="box">
+                <h3>O que é a OAuth</h3>
+                <p>
+                    A OpenAuth (OAuth), ou “Autorização Aberta” em português, pode ser descrita como<br>
+                    um protocolo de autorização que possibilita os sites e aplicativos requisitarem <br>
+                    informações do usuário a outras aplicações sem que a proteção de dados do usuário <br>
+                    seja comprometida. Um bom exemplo disso é quando ao tentar criar uma conta em um <br>
+                    site, muitas vezes em vez do usuário ser limitado a criar uma conta passo a <br>
+                    passo (nome, e-mail, senha etc.) a opção de simplesmente criar uma conta <br>
+                    utilizando as credenciais de sua conta Google ou Meta estão disponíveis, <br>
+                    isso é a Autenticação Aberta.<br>
+                </p>
+                <br>
+                <h3>Como o OAuth funciona</h3>
+                <p>
+                    A OAuth funciona utilizando tokens de autorização para comprovar a identidade do <br>
+                    usuário para o fornecedor da aplicação. Deste modo, as informações cruciais da <br>
+                    conta ficam protegidas, o software poderá utilizar suas informações dentro dos <br>
+                    limites de permissão concedidos, no entanto não terá acesso aos dados de login.<br>
+                </p>
+
+            </div>
+        </section>
+
+        <section class="jwl section" id="jwl">
+            <h2 class="section-title">JWL (Json Web Token)</h2>
+            <div class="jwl-container bd-grid">
+                <div class="box">
+                    <p>
+                        O JWT (JSON Web Token) é um padrão de autenticação utilizado na web, permite uma <br>
+                        transmissão de dados segura e compacta entre duas partes. Assim, esta estrutura <br>
+                        é constituída por três partes: Header, Payload e Signature; Em suma, pode ser <br>
+                        resumida em tipo do token (Header), local de armazenamento dos dados (Payload) <br>
+                        e uma chave codificada do para o token (Signature), todas essas informações <br>
+                        serão utilizadas em ambientes HTML e protocolos HTTP. <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="security section" id="security">
+            <h2 class="section-title">Segurança contra XSS/CSRF</h2>
+            <div class="box">
+                <h3>O que é XSS e CSRF</h3>
+                <p>
+                    XSS (Cross-Site Scripting) e CSRF (Cross-Site Request Forgery) são tipos de <br>
+                    ataques cibernéticos que visam aplicações web. “O XSS age numa página web, <br>
+                    podendo alterar o comportamento de uma aplicação sem que o usuário ou <br>
+                    desenvolvedor perceba. Esta prática dá ao atacante a possibilidade de ler todo o <br>
+                    conteúdo da página e de mandar informações para um servidor controlado pelo <br>
+                    atacante, violando assim, o conceito de privacidade de uma aplicação.” <br>
+                    (GONÇALVES, 2021). Já o CSRF é quando um atacante engana o usuário logado <br>
+                    para executar ações sem o seu consentimento, explorando a sessão/autenticação <br>
+                    ativa. <br>
+                </p>
+                <br>
+                <h3>Como Ocorre</h3>
+                <p>
+                    Para que a proteção contra XSS e CSRF ocorra, ações tanto no backend quanto <br>
+                    no frontend devem ser tomadas. Assim, para o XSS, entrada de dados devem ser <br>
+                    tratadas, restrições de execução de scripts e validação dos campos de dados devem <br>
+                    ser considerados. E, para o CSRF, testes para confirmar a autenticidade do usuário <br>
+                    precisam ser postos à prática, confirmações adicionais de usuário, como PIN e <br>
+                    autenticação de dois fatores, tokens anti-CSRF, configurações de cookies e <br>
+                    verificações de origem da requisição são alguns exemplos de medidas cabíveis <br>
+                    para a segurança contra CSRF. <br>
+                </p>
+            </div>
+
+        </section>
+
+        <section class="conclusion section" id="Conckusao">
+            <h2 class="section-title">Conclusao</h2>
+            <div class="conclusion-container bd-grid">
+                <div class="box">
+                    <p>
+                        Em suma, A OAuth e o JWT surgem como ferramentas relevantes para garantir <br>
+                        autenticação e autorização seguras, permitindo maior controle e confiabilidade<br>
+                        nas interações entre sistemas. Por outro lado, ataques como XSS e CSRF demonstram <br>
+                        a necessidade de medidas adicionais de prevenção, tanto no backend quanto no frontend, <br>
+                        assegurando que a experiência do usuário não seja comprometida por vulnerabilidades <br>
+                        exploráveis. <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> &ensp; Programação Web</p>
+        <p> &emsp; 09/2025 </p>
+        <p><small>&copy; <sup>2025</sup> <sub>Kauã</sub>
+                Todos os direitos reservados. </small></p>
+    </footer>
+
+</body>
+
+</html>

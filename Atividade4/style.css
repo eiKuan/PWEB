@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a3a3a3;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------- CABEÇALHO ------------------ */
+
+.header-1 {
+    background-color: #333;
+    color: rgba(0, 255, 76, 0.725);
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav-logo {
+    color: rgba(174, 255, 189, 0.9);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+.nav-link {
+    color: rgba(0, 255, 76, 0.9);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: rgb(107, 255, 114);
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/*------------------------------------- NOTÍCIAS -----------------------------------*/
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 20px;
+  background: #ffffff98;
+  border-radius: 0.8%;
+  
+}
+
+h2.section-title {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 82, 25, 0.995);
+}
+
+.news-section {
+  display: flex;
+  gap: 20px;
+}
+
+.news-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #6a6a6a38;
+  border: 1px solid #ddd;
+}
+
+.news-left img {
+  width: 100%;
+  height: auto;
+}
+
+.news-left .content {
+  padding: 15px;
+}
+
+.news-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-card {
+  display: flex;
+  background: #6a6a6a38;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+.news-card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.news-card .content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*--------------------------- Texto ---------------------------*/
+
+.tag {
+  font-size: 12px;
+  color: rgba(0, 105, 31, 0.995);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111;
+}
+
+p {
+  font-size: 13px;
+  color: #393939;
+  margin-top: 8px;
+  text-align: justify;
+}

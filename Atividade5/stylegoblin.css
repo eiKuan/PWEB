@@ -1,0 +1,54 @@
+.goblin{
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    background-color: rgb(237, 237, 237);
+}
+
+@media(max-width: 420px){
+    .goblin{
+        background-color: rgb(151, 151, 151);
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+    .goblin{
+
+        background-color: rgb(255, 136, 0);
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1079px){
+    .goblin{
+
+        background-color: rgb(255, 0, 238);
+    }
+}
+
+@media(min-width: 1080px) and (max-width: 1365){
+    .goblin{
+
+        background-color: rgb(255, 17, 0);
+    }
+}
+
+@media(min-width: 1366px) and (max-width: 1919px){
+    .goblin{
+
+        background-color: rgb(20, 11, 199);
+    }
+}
+
+@media(min-width: 1920px) and (max-width: 1920px){
+    .goblin{
+
+        background-color: rgb(255, 247, 0);
+    }
+}
+
+@media(min-width: 1921px){
+    .goblin{
+
+        background-color: rgb(0, 255, 30);
+    }
+}

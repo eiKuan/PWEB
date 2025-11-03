@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Retangulo{
+            constructor(){
+                this._lado1;
+                this._lado2;
+            }
+            setLado1(value){
+                this._lado1 = value;
+            }
+            setLado2(value){
+                this._lado2 = value;
+            }
+
+            calcArea(){
+                return this._lado1 * this._lado2;
+            }
+        }
+
+        let objRetangulo = new Retangulo();
+            const lado1 = parseFloat(prompt("DIGITA O LADO 1 AI DO RETANGULO IRMAO"));
+            objRetangulo.setLado1(lado1);
+            const lado2 = parseFloat(prompt("DIGITA O LADO 2 AI DO RETANGULO IRMAO"));
+            objRetangulo.setLado2(lado2);
+
+            alert("A área do retangulo é: " + objRetangulo.calcArea());
+
+
+        class Conta{
+            constructor(_nome, _banco, _numeroConta, _saldo){
+                this._nome = _nome;
+                this._banco = _banco;
+                this._numeroConta = _numeroConta;
+                this._saldo = _saldo;
+            }
+
+            getNome(){
+                return this._nome;
+            }
+
+            getBanco(){
+                return this._banco;
+            }
+            getNumeroConta(){
+                return this._numeroConta;
+            }
+
+            getSaldo(){
+                return this._saldo;
+            }
+        }
+
+        class Corrente extends Conta{
+            constructor(nome, banco, numeroConta, saldo){
+                super(nome, banco, numeroConta, saldo);
+                this._saldoEspecial;
+            }
+
+            setSaldoEspecial(value){
+                this._saldoEspecial = value;
+            }
+
+            getSaldoEspecial(){
+                return this._saldoEspecial;
+            }
+        }
+
+        class Poupança extends Conta{
+            constructor(nome, banco, numeroConta, saldo){
+                super(nome, banco, numeroConta, saldo);
+                this._juros;
+                this._dataVencimento;
+            }
+
+            setJuros(value){
+                this._juros = value;
+            }
+            getJuros(){
+                return this._juros;
+            }
+            setDataVencimento(value){
+                this._dataVencimento = value;
+            }
+            getDataVencimento(){
+                return this._dataVencimento;
+            }
+        }
+
+        objCorrente = new Corrente("Juliao","Itaú","100", 2000.20);
+        objCorrente.setSaldoEspecial(251);
+
+        alert(`USUARIO CONTA CORRENTE\n
+                Nome: ${objCorrente.getNome()}
+                Banco: ${objCorrente.getBanco()}
+                NumConta: ${objCorrente.getNumeroConta()}
+                Saldo: ${objCorrente.getSaldo()}
+                Saldo Especial: ${objCorrente.getSaldoEspecial()}`);
+
+        objPoupanca = new Poupança("Kojima","O que voce fez", "300",35000.20);
+        objPoupanca.setJuros(10.10);
+        objPoupanca.setDataVencimento("10/10/2030");
+
+        alert(`USUARIO CONTA POUPANÇA\n
+                Nome: ${objPoupanca.getNome()}
+                Banco: ${objPoupanca.getBanco()}
+                NumConta: ${objPoupanca.getNumeroConta()}
+                Juros: ${objPoupanca.getJuros()}
+                Data Vencimento: ${objPoupanca.getDataVencimento()}`);
+
+    </script>
+</body>
+</html>
